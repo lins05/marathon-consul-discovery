@@ -10,8 +10,8 @@ import (
 )
 
 var bind = flag.String("bind", "0.0.0.0", "address to listen on and register with marathon -- 0.0.0.0 auto discovers via mesos slave")
-var port = flag.Int("port", 8080, "http port to listen on")
-var marathon_endpoint = flag.String("marathon", "zookeeper:8080", "marathon to register with")
+var port = flag.Int("port", 8090, "http port to listen on")
+var marathon_endpoint = flag.String("marathon", "localhost:8080", "marathon to register with")
 var mesos_slave = flag.String("mesos_slave", "localhost:5051", "mesos slave to handle tasks for")
 
 func main() {
