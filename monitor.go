@@ -17,7 +17,7 @@ var mesos_slave = flag.String("mesos_slave", "localhost:5051", "mesos slave to h
 func main() {
 	flag.Parse()
 
-	http_client := httpclient.NewHttpClient(nil)
+	http_client := httpclient.NewHttpClient()
 
 	var my_marathon = marathon.Marathon{
 		Master:     *marathon_endpoint,
