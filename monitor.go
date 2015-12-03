@@ -3,9 +3,9 @@ package main
 import (
 	"flag"
 	"github.com/armon/consul-api"
-	"github.com/chrono/marathon-consul-discovery/consul-marathon"
-	"github.com/chrono/marathon-consul-discovery/marathon"
-	"github.com/chrono/marathon-consul-discovery/mesos"
+	"github.com/lins05/marathon-consul-discovery/consul-marathon"
+	"github.com/lins05/marathon-consul-discovery/marathon"
+	"github.com/lins05/marathon-consul-discovery/mesos"
 	"github.com/ddliu/go-httpclient"
 )
 

@@ -1,7 +1,7 @@
 FROM google/golang
 
-ADD . /gopath/src/github.com/chrono/marathon-consul-discovery
-WORKDIR /gopath/src/github.com/chrono/marathon-consul-discovery
+ADD . /gopath/src/github.com/lins05/marathon-consul-discovery
+WORKDIR /gopath/src/github.com/lins05/marathon-consul-discovery
 
 RUN go get ./... && go build ./...
 

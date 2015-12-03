@@ -23,5 +23,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision "shell", inline: $script
 
-  config.vm.synced_folder ".", "/opt/gopath/src/github.com/chrono/marathon-consul-discovery"
+  config.vm.synced_folder ".", "/opt/gopath/src/github.com/lins05/marathon-consul-discovery"
 end

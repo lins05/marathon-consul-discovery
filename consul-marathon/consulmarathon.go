@@ -3,7 +3,7 @@ package consulmarathon
 import (
 	"fmt"
 	"github.com/armon/consul-api"
-	"github.com/chrono/marathon-consul-discovery/marathon"
+	"github.com/lins05/marathon-consul-discovery/marathon"
 	"log"
 	"regexp"
 	"strings"
