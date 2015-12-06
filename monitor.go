@@ -3,10 +3,11 @@ package main
 import (
 	"flag"
 	"github.com/armon/consul-api"
+	"github.com/ddliu/go-httpclient"
 	"github.com/lins05/marathon-consul-discovery/consul-marathon"
 	"github.com/lins05/marathon-consul-discovery/marathon"
 	"github.com/lins05/marathon-consul-discovery/mesos"
-	"github.com/ddliu/go-httpclient"
+	"log"
 )
 
 var bind = flag.String("bind", "0.0.0.0", "address to listen on and register with marathon -- 0.0.0.0 auto discovers via mesos slave")
@@ -15,9 +16,12 @@ var marathon_endpoint = flag.String("marathon", "localhost:8080", "marathon to r
 var mesos_slave = flag.String("mesos_slave", "localhost:5051", "mesos slave to handle tasks for")
 
 func main() {
+	log.SetFlags(log.Lshortfile | log.LstdFlags)
 	flag.Parse()
 
-	http_client := httpclient.NewHttpClient()
+	http_client := httpclient.NewHttpClient().Defaults(httpclient.Map{
+		"Accept": "application/json",
+	})
 
 	var my_marathon = marathon.Marathon{
 		Master:     *marathon_endpoint,

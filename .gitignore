@@ -3,8 +3,4 @@
 *#
 #*
 /marathon-consul-discovery
-
-/GTAGS
-/GPATH
-/GRTAGS
-gtags.files
+*.zip
